@@ -15,10 +15,6 @@ body {
     grid-template: max-content 1fr / max-content 1fr;
 }
 
-div {
-
-}
-
 .icon {
     width: 1.5rem;
     height: 1.5rem;
@@ -78,7 +74,7 @@ a {
     display: grid;
     grid-template-columns: 5fr 1fr;
     padding: 1.5rem;
-    color: rgb(130, 132, 144);;
+    color: rgb(130, 132, 144);
 }
 
 .header-links {
@@ -133,4 +129,67 @@ input, input:focus, input:focus:not(:placeholder-shown) {
     height: 3rem;
     border: solid black 1px;
     border-radius: 50%;
+}
+
+.content-container {
+    display: grid;
+    grid-template: max-content 1fr / 1fr max-content;
+}
+
+.projects-title {
+    padding-left: 3rem;
+    color: rgb(65, 69, 81);
+    font-size: 1.5rem;
+}
+
+.projects {
+    display: grid;
+    grid-template: max-content / repeat(auto-fit, minmax(300px, 1fr));
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.card {
+    box-sizing: content-box;
+    outline: white;
+    border-radius: 15px;
+    width: 300px;
+    display: grid;
+    grid-template-rows: max-content max-content 1fr max-content;
+    text-align:left;
+    gap: 1rem;
+    padding: 2rem;
+    transition: all 0.3s;
+    color: rgb(130, 132, 144);
+}
+
+.card:hover {
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s;
+    outline: 2px solid lightblue;
+}
+
+.card-title {
+    color: rgb(65, 69, 81);
+}
+
+.card > img {
+    margin-bottom: 1rem;
+    object-fit: cover;
+    width: 300px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+.card-footer {
+    padding-right: 0.5rem;
+    display: flex;
+    justify-content: right;
+    gap: 1rem;
+}
+
+.card-footer > img {
+    margin-top: 1rem;
+    width: 20px;
+    height: 20px;
 }
